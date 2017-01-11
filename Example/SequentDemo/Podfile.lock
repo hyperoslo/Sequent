@@ -1,16 +1,56 @@
 PODS:
-  - Sequent (0.1.0)
+  - Brick (2.0.5):
+    - Tailor (~> 2.0)
+  - Cache (2.2.1):
+    - CryptoSwift
+  - Compass (4.0.0)
+  - CryptoSwift (0.6.0)
+  - Malibu (2.0.1):
+    - When (~> 2.0)
+  - ReactiveReSwift (3.0.1)
+  - RxSwift (3.1.0)
+  - Sequent (0.1.0):
+    - Compass
+    - Malibu
+    - ReactiveReSwift
+    - RxSwift
+    - Spots
+  - Spots (5.7.2):
+    - Brick (~> 2.0)
+    - Cache (~> 2.0)
+    - CryptoSwift (= 0.6.0)
+    - Tailor (~> 2.0)
+  - Tailor (2.0.2)
+  - When (2.0.0)
 
 DEPENDENCIES:
+  - ReactiveReSwift (from `https://github.com/vadymmarkov/ReactiveReSwift`)
   - Sequent (from `../../`)
 
 EXTERNAL SOURCES:
+  ReactiveReSwift:
+    :git: https://github.com/vadymmarkov/ReactiveReSwift
   Sequent:
     :path: "../../"
 
-SPEC CHECKSUMS:
-  Sequent: 87d5756dd8637a8525ea3ce722b468acb87315d2
+CHECKOUT OPTIONS:
+  ReactiveReSwift:
+    :commit: 599e509943c76026dece3cca2e9ae492a9a416a3
+    :git: https://github.com/vadymmarkov/ReactiveReSwift
 
-PODFILE CHECKSUM: 78f82ebe602b38341b653bdac5ca9f4d5e864f98
+SPEC CHECKSUMS:
+  Brick: 08788c20c9b9aded5b9e89b8a8942c1b4933e91a
+  Cache: 5b2d2d68477bd9c5b8e539d673cc217ed1284814
+  Compass: b7802d133b95ffde747515f0e84ed8b5153c3d53
+  CryptoSwift: 4a599b7241b8d3b857d6e2c28867d0bd5d1aae24
+  Malibu: ad2cdf6863a23d8be2fe22d4bc3dd5d4097b23fe
+  ReactiveReSwift: e523cd221d14ebc147b873fc36ba660fdb36f2d7
+  RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
+  Sequent: 6c8f795518831b902ff18aa0545c468a99b1d4b2
+  Spots: 07f5917bd9a7a3a2184b1ae367c2843aa69f7296
+  Tailor: 6f03d033af361a7cf1f25627a1877c5b91a9618c
+  When: 3df626af4891607ea7dd3f46a451176c5642c528
+
+PODFILE CHECKSUM: 3bb0c3f9fb13003144ec5480e5c0d93374c0b6fb
 
 COCOAPODS: 1.1.1

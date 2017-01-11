@@ -27,5 +27,6 @@ Pod::Spec.new do |s|
   s.dependency 'Compass'
   s.dependency 'Malibu'
   s.dependency 'RxSwift'
+  s.dependency 'ReactiveReSwift'
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 end
