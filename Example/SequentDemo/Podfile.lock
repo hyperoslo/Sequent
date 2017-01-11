@@ -1,0 +1,16 @@
+PODS:
+  - Sequent (0.1.0)
+
+DEPENDENCIES:
+  - Sequent (from `../../`)
+
+EXTERNAL SOURCES:
+  Sequent:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  Sequent: 87d5756dd8637a8525ea3ce722b468acb87315d2
+
+PODFILE CHECKSUM: 78f82ebe602b38341b653bdac5ca9f4d5e864f98
+
+COCOAPODS: 1.1.1
