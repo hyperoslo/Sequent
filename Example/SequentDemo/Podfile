@@ -3,6 +3,6 @@ use_frameworks!
 platform :ios, '8.0'
 
 target 'SequentDemo' do
-  pod 'ReactiveReSwift', git: 'https://github.com/vadymmarkov/ReactiveReSwift'
+  pod 'ReactiveReSwift', git: 'https://github.com/ReSwift/ReactiveReSwift'
   pod 'Sequent', path: '../../'
 end
