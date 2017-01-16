@@ -22,37 +22,14 @@ struct FetchNotes: RequestActionCreator, GETRequestable {
       .validate()
       .toJsonArray()
       .then({ array -> [Component] in
-        let component = try NoteListComponent(array).component
+        let notes = try array.map({ try Note($0) })
+        let items = notes.map({
+          return NoteTransformer(note: $0).listItem
+        })
+
+        let component = Component(kind: Component.Kind.List.rawValue, items: items)
         return [component]
       })
-  }
-}
-
-struct NoteTransformer {
-
-  let note: Note
-
-  var listItem: Item {
-    return Item(
-      identifier: note.id,
-      title: note.title,
-      subtitle: "Author: \(note.userId)",
-      text: note.body,
-      kind: "list",
-      action: "notes:\(note.id)")
-  }
-}
-
-struct NoteListComponent: ComponentModel {
-  var component: Component
-
-  init(_ array: JsonArray) throws {
-    let notes = try array.map({ try Note($0) })
-    let items = notes.map({
-      return NoteTransformer(note: $0).listItem
-    })
-
-    component = Component(kind: Component.Kind.List.rawValue, items: items)
   }
 }
 
