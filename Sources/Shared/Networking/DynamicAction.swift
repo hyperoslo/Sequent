@@ -6,7 +6,7 @@ public enum Output<T> {
   case error(Error)
 }
 
-public protocol AsyncAction: Action {
+public protocol DynamicAction: Action {
   associatedtype DataType
   var payload: Output<DataType> { get set }
   init(payload: Output<DataType>)
