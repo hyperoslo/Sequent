@@ -5,6 +5,7 @@ PODS:
     - CryptoSwift
   - Compass (4.0.0)
   - CryptoSwift (0.6.0)
+  - Fashion (2.0.0)
   - Malibu (2.0.1):
     - When (~> 2.0)
   - ReactiveReSwift (3.0.2)
@@ -24,6 +25,7 @@ PODS:
   - When (2.0.0)
 
 DEPENDENCIES:
+  - Fashion
   - ReactiveReSwift (from `https://github.com/ReSwift/ReactiveReSwift`)
   - Sequent (from `../../`)
 
@@ -43,6 +45,7 @@ SPEC CHECKSUMS:
   Cache: 5b2d2d68477bd9c5b8e539d673cc217ed1284814
   Compass: b7802d133b95ffde747515f0e84ed8b5153c3d53
   CryptoSwift: 4a599b7241b8d3b857d6e2c28867d0bd5d1aae24
+  Fashion: f5cd202dcd048edd35217349527ac446d0853cd7
   Malibu: ad2cdf6863a23d8be2fe22d4bc3dd5d4097b23fe
   ReactiveReSwift: 0e964287589ceaacb21e88d0b84d2e58f6a34b3a
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
@@ -51,6 +54,6 @@ SPEC CHECKSUMS:
   Tailor: 6f03d033af361a7cf1f25627a1877c5b91a9618c
   When: 3df626af4891607ea7dd3f46a451176c5642c528
 
-PODFILE CHECKSUM: 9c2c76cf4efc2daa1e73dfad03faa8149fcc7b36
+PODFILE CHECKSUM: f1b7bf30daa86fffbd37de0a211898d56a4d11f1
 
 COCOAPODS: 1.1.1

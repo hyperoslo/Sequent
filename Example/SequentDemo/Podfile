@@ -5,4 +5,5 @@ platform :ios, '8.0'
 target 'SequentDemo' do
   pod 'ReactiveReSwift', git: 'https://github.com/ReSwift/ReactiveReSwift'
   pod 'Sequent', path: '../../'
+  pod 'Fashion'
 end

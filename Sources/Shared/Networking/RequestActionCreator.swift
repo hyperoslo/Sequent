@@ -3,12 +3,14 @@ import RxSwift
 import Malibu
 import When
 
-public protocol RequestActionCreator: Requestable, ObservableConvertibleType {
+public protocol ActionCreator: ObservableConvertibleType {
   associatedtype ActionType: DynamicAction
-  var networking: String { get }
-
-  func transform(ride: Ride) -> Promise<ActionType.DataType>
   func buildAction(payload: Output<ActionType.DataType>) -> ActionType
+}
+
+public protocol RequestActionCreator: ActionCreator, Requestable {
+  var networking: String { get }
+  func transform(ride: Ride) -> Promise<ActionType.DataType>
 }
 
 public extension RequestActionCreator {
@@ -42,7 +44,7 @@ public extension RequestActionCreator {
 }
 
 public extension Store {
-  func dispatch<C: RequestActionCreator>(_ creator: C) where C.E: Action {
+  func dispatch<C: ActionCreator>(_ creator: C) where C.E: Action {
     dispatch(creator.asObservable())
   }
 }
