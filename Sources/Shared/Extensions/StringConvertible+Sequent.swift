@@ -1,9 +1,8 @@
-//
-//  StringConvertible+Sequent.swift
-//  Pods
-//
-//  Created by Vadym Markov on 13/01/2017.
-//
-//
+import Brick
 
-import Foundation
+public extension StringConvertible where Self: RawRepresentable, Self.RawValue == String {
+
+  var string: String {
+    return rawValue.dashed()
+  }
+}
