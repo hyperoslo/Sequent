@@ -5,44 +5,34 @@ import Brick
 import Spots
 import Tailor
 
-// Actions
+// List
 
-struct SetNotesAction: DynamicAction {
-  var payload: Output<[Component]>
+struct NoteListAction: DynamicAction {
+  var payload: Output<Component>
 }
 
-struct FetchNotes: RequestActionCreator, GETRequestable {
-  typealias ActionType = SetNotesAction
+struct NoteListIntent: RequestIntent, GETRequestable, ComponentTransformer {
+  typealias E = NoteListAction
+  typealias IB = NoteItemBuilder
 
   let networking: String = "base"
   var message: Message = Message(resource: "posts")
-
-  func transform(ride: Ride) -> Promise<[Component]> {
-    return ride
-      .validate()
-      .toJsonArray()
-      .then({ array -> [Component] in
-        let notes = try array.map({ try Note($0) })
-        let items = notes.map({
-          return NoteTransformer(note: $0).listItem
-        })
-
-        let component = Component(kind: Component.Kind.List.rawValue, items: items)
-        return [component]
-      })
-  }
+  var kind: Component.Kind = .List
 }
 
-struct SetNoteAction: DynamicAction {
+// Update
+
+struct NoteUpdateAction: DynamicAction {
   var payload: Output<Item>
 }
 
-struct UpdateNote: RequestActionCreator, PATCHRequestable {
-  typealias ActionType = SetNoteAction
+struct NoteUpdateIntent: RequestIntent, PATCHRequestable, ItemTransformer {
+  typealias E = NoteUpdateAction
+  typealias IB = NoteItemBuilder
 
   let networking: String = "base"
   var message: Message
-  
+
   init(model: Note) {
     message = Message(resource: "posts/\(model.id)")
     message.parameters = [
@@ -50,56 +40,29 @@ struct UpdateNote: RequestActionCreator, PATCHRequestable {
       "body"  : model.body
     ]
   }
+}
 
-  func transform(ride: Ride) -> Promise<Item> {
-    return ride
-      .validate()
-      .toJsonDictionary()
-      .then({
-        return NoteTransformer(note: try Note($0)).listItem
-      })
+// Detail
+
+struct NoteAction: DynamicAction {
+  var payload: Output<Item>
+}
+
+struct NoteIntent: RequestIntent, GETRequestable, ItemTransformer {
+  typealias E = NoteAction
+  typealias IB = NoteItemBuilder
+
+  let networking: String = "base"
+  var message: Message
+
+  init(model: Note) {
+    message = Message(resource: "posts/\(model.id)")
   }
 }
 
 
 
 
-//struct NoteFeature: ListFeature, DetailFeature, DeleteFeature {
-//  typealias Model = Note
-//
-//  var resource = "posts"
-//
-//  func render(model: Note, on cell: UITableViewCell) {
-//    cell.textLabel?.text = model.title.capitalized
-//    cell.detailTextLabel?.text = "Note ID: \(model.id)"
-//  }
-//
-//  func select(model: Note, controller: UITableViewController) {
-//    let detailController = NoteDetailController(id: model.id)
-//    controller.navigationController?.pushViewController(detailController, animated: true)
-//  }
-//}
-//
-//// MARK: - Update
-//
-//extension NoteFeature: UpdateFeature {
-//
-//  struct Request: PATCHRequestable {
-//    var message: Message
-//
-//    init(model: Note) {
-//      message = Message(resource: "posts/\(model.id)")
-//      message.parameters = [
-//        "title" : model.title,
-//        "body"  : model.body
-//      ]
-//    }
-//  }
-//
-//  func buildUpdateRequest(from model: Model) -> PATCHRequestable {
-//    return Request(model: model)
-//  }
-//}
 
 // MARK: - List, Delete
 

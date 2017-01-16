@@ -80,7 +80,7 @@ class NoteController: UIViewController {
     guard var note = note, let title = titleLabel.text, let body = textView.text else {
       return
     }
-    
+
     note.title = title
     note.body = body
   }

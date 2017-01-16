@@ -1,10 +1,15 @@
 import Brick
+import Sequent
 
-struct NoteTransformer {
+struct NoteItemBuilder: ItemBuilder {
 
   let note: Note
 
-  var listItem: Item {
+  init(_ entity: Note) {
+    self.note = entity
+  }
+
+  func build() -> Item {
     return Item(
       identifier: note.id,
       title: note.title,

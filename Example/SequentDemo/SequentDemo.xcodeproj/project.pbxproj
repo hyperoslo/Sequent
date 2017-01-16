@@ -24,11 +24,11 @@
 		D5641A4B1E2CF4130035AB0A /* SpotsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A4A1E2CF4130035AB0A /* SpotsConfigurator.swift */; };
 		D5641A4E1E2CF48A0035AB0A /* Indentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A4D1E2CF48A0035AB0A /* Indentifiers.swift */; };
 		D590B4971E2D4BA300F51A9B /* NotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B4961E2D4BA300F51A9B /* NotesController.swift */; };
-		D590B4991E2D4BD600F51A9B /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B4981E2D4BD600F51A9B /* NoteController.swift */; };
 		D590B49B1E2D4BEC00F51A9B /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B49A1E2D4BEC00F51A9B /* ProfileController.swift */; };
 		D590B49E1E2D4C0500F51A9B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B49D1E2D4C0500F51A9B /* MainController.swift */; };
 		D590B4A01E2D4C4E00F51A9B /* NotesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B49F1E2D4C4E00F51A9B /* NotesActions.swift */; };
 		D590B4A21E2D59AB00F51A9B /* NoteTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B4A11E2D59AA00F51A9B /* NoteTransformer.swift */; };
+		D590B4A61E2D84FA00F51A9B /* NoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B4A51E2D84FA00F51A9B /* NoteController.swift */; };
 		D5BB20AB1E28D3FB00637E95 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB20AA1E28D3FB00637E95 /* State.swift */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
@@ -54,11 +54,11 @@
 		D5641A4A1E2CF4130035AB0A /* SpotsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotsConfigurator.swift; sourceTree = "<group>"; };
 		D5641A4D1E2CF48A0035AB0A /* Indentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indentifiers.swift; sourceTree = "<group>"; };
 		D590B4961E2D4BA300F51A9B /* NotesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesController.swift; sourceTree = "<group>"; };
-		D590B4981E2D4BD600F51A9B /* NoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		D590B49A1E2D4BEC00F51A9B /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D590B49D1E2D4C0500F51A9B /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		D590B49F1E2D4C4E00F51A9B /* NotesActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesActions.swift; sourceTree = "<group>"; };
 		D590B4A11E2D59AA00F51A9B /* NoteTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTransformer.swift; sourceTree = "<group>"; };
+		D590B4A51E2D84FA00F51A9B /* NoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteController.swift; sourceTree = "<group>"; };
 		D5BB20AA1E28D3FB00637E95 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		D5C7F7401C3BC9CE008CDDBA /* SequentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SequentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F74D1C3BC9CE008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,7 +160,6 @@
 				D590B49C1E2D4BFC00F51A9B /* Main */,
 				D590B4951E2D4B9700F51A9B /* Profile */,
 				D590B4941E2D4B8E00F51A9B /* Todos */,
-				D590B4931E2D4B7E00F51A9B /* Note */,
 				D590B4921E2D4B7800F51A9B /* Notes */,
 			);
 			path = Features;
@@ -172,16 +171,9 @@
 				D590B4961E2D4BA300F51A9B /* NotesController.swift */,
 				D590B49F1E2D4C4E00F51A9B /* NotesActions.swift */,
 				D590B4A11E2D59AA00F51A9B /* NoteTransformer.swift */,
+				D590B4A51E2D84FA00F51A9B /* NoteController.swift */,
 			);
 			path = Notes;
-			sourceTree = "<group>";
-		};
-		D590B4931E2D4B7E00F51A9B /* Note */ = {
-			isa = PBXGroup;
-			children = (
-				D590B4981E2D4BD600F51A9B /* NoteController.swift */,
-			);
-			path = Note;
 			sourceTree = "<group>";
 		};
 		D590B4941E2D4B8E00F51A9B /* Todos */ = {
@@ -391,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5641A431E2CD8DB0035AB0A /* Profile.swift in Sources */,
+				D590B4A61E2D84FA00F51A9B /* NoteController.swift in Sources */,
 				D5641A4B1E2CF4130035AB0A /* SpotsConfigurator.swift in Sources */,
 				D5641A461E2CD8DB0035AB0A /* NoteStylesheet.swift in Sources */,
 				D5641A481E2CD8DB0035AB0A /* TableCell.swift in Sources */,
@@ -404,7 +397,6 @@
 				D5641A401E2CD8DB0035AB0A /* UIViewController+Extensions.swift in Sources */,
 				D5641A311E2CD8DB0035AB0A /* FashionConfigurator.swift in Sources */,
 				D5641A441E2CD8DB0035AB0A /* Todo.swift in Sources */,
-				D590B4991E2D4BD600F51A9B /* NoteController.swift in Sources */,
 				D5641A3E1E2CD8DB0035AB0A /* PayloadStorage.swift in Sources */,
 				D5641A451E2CD8DB0035AB0A /* MainStylesheet.swift in Sources */,
 				D5BB20AB1E28D3FB00637E95 /* State.swift in Sources */,

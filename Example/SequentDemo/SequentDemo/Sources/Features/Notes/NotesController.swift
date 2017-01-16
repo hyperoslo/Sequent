@@ -25,8 +25,8 @@ class NotesController: Spots.Controller {
       switch posts {
       case .progress:
         self?.refreshControl.beginRefreshing()
-      case .data(let components):
-        self?.reloadIfNeeded(components)
+      case .data(let component):
+        self?.reloadIfNeeded([component])
       case .error(let error):
         print(error)
       }
@@ -41,7 +41,7 @@ class NotesController: Spots.Controller {
   // MARK: - Actions
 
   func refreshData() {
-    let action = FetchNotes()
-    App.store.dispatch(action)
+    let intent = NoteListIntent()
+    App.store.dispatch(intent)
   }
 }
