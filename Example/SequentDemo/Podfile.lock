@@ -7,7 +7,7 @@ PODS:
   - CryptoSwift (0.6.0)
   - Malibu (2.0.1):
     - When (~> 2.0)
-  - ReactiveReSwift (3.0.1)
+  - ReactiveReSwift (3.0.2)
   - RxSwift (3.1.0)
   - Sequent (0.1.0):
     - Compass
@@ -35,7 +35,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ReactiveReSwift:
-    :commit: 599e509943c76026dece3cca2e9ae492a9a416a3
+    :commit: 064db19fc6ad99ef6e06b947fe8a94bee4c94697
     :git: https://github.com/vadymmarkov/ReactiveReSwift
 
 SPEC CHECKSUMS:
@@ -44,7 +44,7 @@ SPEC CHECKSUMS:
   Compass: b7802d133b95ffde747515f0e84ed8b5153c3d53
   CryptoSwift: 4a599b7241b8d3b857d6e2c28867d0bd5d1aae24
   Malibu: ad2cdf6863a23d8be2fe22d4bc3dd5d4097b23fe
-  ReactiveReSwift: e523cd221d14ebc147b873fc36ba660fdb36f2d7
+  ReactiveReSwift: 6a5ee62eeea060dc6252e9abd64a487d805250e6
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   Sequent: 6c8f795518831b902ff18aa0545c468a99b1d4b2
   Spots: 07f5917bd9a7a3a2184b1ae367c2843aa69f7296
