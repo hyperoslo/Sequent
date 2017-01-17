@@ -2,7 +2,6 @@ import ReactiveReSwift
 import RxSwift
 import Malibu
 import When
-import Spots
 
 public protocol NetworkIntent: ObservableIntent {
   associatedtype E: DynamicAction

@@ -3,6 +3,8 @@ import RxSwift
 import Spots
 import Brick
 
+// MARK: - Observable
+
 extension Promise: ObservableConvertibleType {
 
   public func asObservable() -> Observable<T> {
@@ -23,7 +25,7 @@ extension Promise: ObservableConvertibleType {
   }
 }
 
-// View model
+// MARK: - JSON dictionary
 
 extension Collection where Self: DictionaryLiteralConvertible, Self.Key == String, Self.Value: Any, Iterator.Element == (key: Self.Key, value: Self.Value) {
 
@@ -42,7 +44,7 @@ public extension Promise where T: Collection, T: DictionaryLiteralConvertible, T
 
   public func toComponents(viewModel: ViewModel.Type) -> Promise<[Component]> {
     return then({ collection -> [Component] in
-      var dict = collection.toDictionary()
+      let dict = collection.toDictionary()
       let components = try viewModel.init(dict).components
       return components
     })
@@ -50,13 +52,13 @@ public extension Promise where T: Collection, T: DictionaryLiteralConvertible, T
 
   public func toItem<IB: ItemBuilder>(builder: IB.Type) -> Promise<Item> {
     return then({ collection -> Item in
-      var dict = collection.toDictionary()
+      let dict = collection.toDictionary()
       return IB(try IB.T(dict)).build()
     })
   }
 }
 
-// Components
+// MARK: - JSON array
 
 public extension Promise where T: Sequence, T.Iterator.Element == JsonDictionary {
 
@@ -69,6 +71,7 @@ public extension Promise where T: Sequence, T.Iterator.Element == JsonDictionary
       })
 
       let component = Component(kind: kind.rawValue, items: items)
+
       return [component]
     })
   }
