@@ -8,7 +8,7 @@ import Tailor
 // List
 
 struct NoteListAction: DynamicAction {
-  var payload: Output<Component>
+  var payload: Output<[Component]>
 }
 
 struct NoteListIntent: RequestIntent, GETRequestable, ComponentTransformer {
@@ -19,6 +19,19 @@ struct NoteListIntent: RequestIntent, GETRequestable, ComponentTransformer {
   var message: Message = Message(resource: "posts")
   var kind: Component.Kind = .List
 }
+
+//struct NoteObjectListAction: DynamicAction {
+//  var payload: Output<[Note]>
+//}
+//
+//struct NoteObjectListIntent: RequestIntent, GETRequestable, EntityArrayTransformer {
+//  typealias E = NoteObjectListAction
+//  typealias Entity = Note
+//
+//  let networking: String = "base"
+//  var message: Message = Message(resource: "posts")
+//  var kind: Component.Kind = .List
+//}
 
 // Update
 
@@ -59,47 +72,3 @@ struct NoteIntent: RequestIntent, GETRequestable, ItemTransformer {
     message = Message(resource: "posts/\(model.id)")
   }
 }
-
-
-
-
-
-// MARK: - List, Delete
-
-//struct TodoFeature: ListFeature, DeleteFeature, CommandProducer {
-//  typealias Model = Todo
-//
-//  var resource = "todos"
-//
-//  func render(model: Todo, on cell: UITableViewCell) {
-//    cell.textLabel?.text = model.title.capitalized
-//    cell.accessoryType = model.completed ? .checkmark : .none
-//  }
-//
-//  func select(model: Todo, controller: UITableViewController) {
-//    var model = model
-//    model.completed = !model.completed
-//
-//    execute(command: UpdateCommand<TodoFeature>(model: model))
-//  }
-//}
-//
-//// MARK: - Update
-//
-//extension TodoFeature: UpdateFeature {
-//
-//  struct UpdateRequest: PATCHRequestable {
-//    var message: Message
-//
-//    init(model: Todo) {
-//      message = Message(resource: "todos/\(model.id)")
-//      message.parameters = [
-//        "completed" : model.completed
-//      ]
-//    }
-//  }
-//
-//  func buildUpdateRequest(from model: Model) -> PATCHRequestable {
-//    return UpdateRequest(model: model)
-//  }
-//}

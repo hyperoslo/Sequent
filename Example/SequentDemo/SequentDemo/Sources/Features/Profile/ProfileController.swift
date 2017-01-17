@@ -1,31 +1,16 @@
 import UIKit
 import Sequent
+import RxSwift
 
 class ProfileController: UIViewController {
 
   lazy var notesCountLabel: UILabel = UILabel(styles: ProfileStylesheet.Style.notesCountLabel)
   lazy var todosCountLabel: UILabel = UILabel(styles: ProfileStylesheet.Style.todosCountLabel)
-
-  var profile: Profile {
-    didSet {
-      updateText()
-    }
-  }
+  private let disposeBag = DisposeBag()
 
   // MARK: - Initialization
 
-  required init() {
-    profile = Profile(name: "Profile", notesCount: 0, todosCount: 0)
-    super.init(nibName: nil, bundle: nil)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-
   deinit {
-    // Don't forget to dispose all reaction tokens.
-    //disposeAll()
   }
 
   // MARK: - View lifecycle
@@ -34,11 +19,15 @@ class ProfileController: UIViewController {
     super.viewDidLoad()
 
     view.stylize(MainStylesheet.Style.content)
-    updateText()
 
     [notesCountLabel, todosCountLabel].forEach {
       self.view.addSubview($0)
     }
+
+    App.store.observable.asObservable().map({ $0.profile }).subscribe(onNext: { [weak self] profile in
+      self?.notesCountLabel.text = "Total notes: \(profile.notesCount)"
+      self?.todosCountLabel.text = "Total todos: \(profile.todosCount)"
+    }).addDisposableTo(disposeBag)
 
     setupConstrains()
   }
@@ -53,12 +42,5 @@ class ProfileController: UIViewController {
     todosCountLabel.topAnchor.constraint(equalTo: notesCountLabel.bottomAnchor, constant: 20).isActive = true
     todosCountLabel.leadingAnchor.constraint(equalTo: notesCountLabel.leadingAnchor).isActive = true
     todosCountLabel.trailingAnchor.constraint(equalTo: notesCountLabel.trailingAnchor).isActive = true
-  }
-
-  // MARK: - UI
-
-  func updateText() {
-    notesCountLabel.text = "Total notes: \(profile.notesCount)"
-    todosCountLabel.text = "Total todos: \(profile.todosCount)"
   }
 }

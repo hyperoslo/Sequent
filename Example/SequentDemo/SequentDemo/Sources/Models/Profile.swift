@@ -1,5 +1,4 @@
 struct Profile {
-  var name: String
-  var notesCount: Int
-  var todosCount: Int
+  var notesCount: Int = 0
+  var todosCount: Int = 0
 }

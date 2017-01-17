@@ -1,10 +1,21 @@
 import UIKit
+import Sequent
 
 class MainController: UITabBarController {
 
   lazy var noteListController: UINavigationController = {
-    let controller = NotesController()
+    let controller = SequentController(
+      cacheKey: "notes",
+      dispatch: ({
+        App.store.dispatch(NoteListIntent())
+      }),
+      observable: ({
+        return App.store.observable.asObservable().map({ $0.notes })
+      })
+    )
+
     let navigationController = UINavigationController(rootViewController: controller)
+    controller.view.backgroundColor = UIColor.white
     controller.view.stylize(MainStylesheet.Style.content)
     controller.title = "Notes"
     controller.tabBarItem.title = "Notes"
@@ -14,9 +25,18 @@ class MainController: UITabBarController {
   }()
 
   lazy var todoListController: UINavigationController = {
-    let controller = NotesController()
+    let controller = SequentController(
+      cacheKey: "notes",
+      dispatch: ({
+        App.store.dispatch(TodoListIntent())
+      }),
+      observable: ({
+        return App.store.observable.asObservable().map({ $0.todos })
+      })
+    )
+
     let navigationController = UINavigationController(rootViewController: controller)
-    controller.view.stylize(MainStylesheet.Style.content)
+    controller.view.backgroundColor = UIColor.white
     controller.tabBarItem.title = "Todos"
     controller.title = "Todos"
     controller.tabBarItem.image = UIImage(named: "tabTodos")

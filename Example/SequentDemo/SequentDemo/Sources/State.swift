@@ -8,7 +8,9 @@ import Spots
 // State
 
 struct AppState: StateType {
-  var notes: Output<Component> = .data(Component())
+  var notes: Output<[Component]> = .data([])
+  var todos: Output<[Component]> = .data([])
+  var profile = Profile()
 }
 
 // Store
@@ -26,11 +28,23 @@ struct App {
   }
 
   static let reducer = Reducer<AppState> { action, state in
+    var state = state
+
     switch action {
     case let action as NoteListAction:
-      return AppState(notes: action.payload)
+      state.notes = action.payload
+      if let notesCount = state.notes.data?.first?.items.count {
+        state.profile.notesCount = notesCount
+      }
+    case let action as TodoListAction:
+      state.todos = action.payload
+      if let todosCount = state.todos.data?.first?.items.count {
+        state.profile.todosCount = todosCount
+      }
     default:
-      return state
+      break
     }
+
+    return state
   }
 }
