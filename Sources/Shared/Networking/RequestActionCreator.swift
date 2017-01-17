@@ -3,22 +3,20 @@ import RxSwift
 import Malibu
 import When
 
-public protocol Intent: ObservableConvertibleType {
-  associatedtype E: DynamicAction
-
-  func buildAction(payload: Output<E.DataType>) -> E
+public protocol Intent {
+  associatedtype E: Action
 }
 
-public protocol RequestIntent: Intent, Requestable {
+public protocol DynamicIntent: Intent {
+  associatedtype E: DynamicAction
+}
+
+public protocol RequestIntent: DynamicIntent, Requestable {
   var networking: String { get }
   func transform(ride: Ride) -> Promise<E.DataType>
 }
 
 public extension RequestIntent {
-
-  func buildAction(payload: Output<E.DataType>) -> E {
-    return E(payload: payload)
-  }
 
   func asObservable() -> Observable<E> {
     return Observable.create({ observer in
@@ -27,11 +25,11 @@ public extension RequestIntent {
 
       self.transform(ride: ride)
         .done({ data in
-          let action = self.buildAction(payload: Output.data(data))
+          let action = E(payload: Output.data(data))
           observer.onNext(action)
         })
         .fail({ error in
-          observer.onNext(self.buildAction(payload: .error(error)))
+          observer.onNext(E(payload: .error(error)))
         })
         .always({ _ in
           observer.on(.completed)
@@ -40,12 +38,12 @@ public extension RequestIntent {
       return Disposables.create {
         ride.cancel()
       }
-    }).startWith(buildAction(payload: .progress))
+    }).startWith(E(payload: .progress))
   }
 }
 
 public extension Store {
-  func dispatch<I: Intent>(_ intent: I) {
+  func dispatch<I: RequestIntent>(_ intent: I) {
     dispatch(intent.asObservable())
   }
 }
