@@ -2,48 +2,57 @@ import ReactiveReSwift
 import RxSwift
 import Malibu
 import When
+import Spots
 
-public protocol Intent {
-  associatedtype E: Action
-}
-
-public protocol DynamicIntent: Intent {
+public protocol NetworkIntent: ObservableIntent {
   associatedtype E: DynamicAction
+  func asNetworkObservable() -> NetworkObservable<E>
 }
 
-public protocol RequestIntent: DynamicIntent, Requestable {
-  var networking: String { get }
-  func transform(ride: Ride) -> Promise<E.DataType>
-}
-
-public extension RequestIntent {
+public extension NetworkIntent {
 
   func asObservable() -> Observable<E> {
-    return Observable.create({ observer in
-      let ride = Malibu.networking(self.networking)
-        .execute(self)
+    return asNetworkObservable().asObservable()
+  }
+}
 
-      self.transform(ride: ride)
+public struct NetworkObservable<A: DynamicAction>: ObservableConvertibleType {
+  public typealias Transform = (Ride) -> Promise<A.Data>
+  public let networking: String
+  public let request: Requestable
+  public let transform: (Ride) -> Promise<A.Data>
+
+  public init(networking: String, request: Requestable, _ transform: @escaping Transform) {
+    self.networking = networking
+    self.request = request
+    self.transform = transform
+  }
+
+  public func asObservable() -> Observable<A> {
+    return Observable.create({ observer in
+      let ride = Malibu.networking(self.networking).execute(self.request)
+
+      self.transform(ride)
         .done({ data in
-          let action = E(payload: Output.data(data))
+          let action = A(payload: Output.data(data))
           observer.onNext(action)
         })
         .fail({ error in
-          observer.onNext(E(payload: .error(error)))
+          observer.onNext(A(payload: .error(error)))
         })
         .always({ _ in
-          observer.on(.completed)
+          observer.onCompleted()
         })
 
       return Disposables.create {
         ride.cancel()
       }
-    }).startWith(E(payload: .progress))
+    }).startWith(A(payload: .progress))
   }
 }
 
 public extension Store {
-  func dispatch<I: RequestIntent>(_ intent: I) {
+  func dispatch<T: NetworkIntent>(_ intent: T) {
     dispatch(intent.asObservable())
   }
 }

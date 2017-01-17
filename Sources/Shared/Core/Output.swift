@@ -1,5 +1,3 @@
-import ReactiveReSwift
-
 public enum Output<T> {
   case progress
   case data(T)
@@ -31,10 +29,4 @@ public enum Output<T> {
       return false
     }
   }
-}
-
-public protocol DynamicAction: Action {
-  associatedtype DataType
-  var payload: Output<DataType> { get set }
-  init(payload: Output<DataType>)
 }
