@@ -6,19 +6,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  lazy var navigationController: UINavigationController = { [unowned self] in
-    let controller = UINavigationController(rootViewController: self.viewController)
-    return controller
-    }()
+  var configurators: [Configurable] = [
+    FashionConfigurator(),
+    MalibuConfigurator(),
+    SpotsConfigurator(),
+    CompassConfigurator()
+  ]
 
-  lazy var viewController: ViewController = {
-    let controller = ViewController()
+  lazy var mainController: MainController = {
+    let controller = MainController()
     return controller
-    }()
+  }()
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  var navigator: Navigator?
+
+  // MARK: - Application lifecycle
+
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
-    window?.rootViewController = navigationController
+    window?.rootViewController = mainController
+
+    App.delegate = self
+
+    configurators.forEach {
+      $0.configure()
+    }
+
+    navigator = Navigator(
+      navigationRouter: { App.router },
+      observable: {
+        App.store.observable.asObservable().map({ $0.navigationState }).distinctUntilChanged()
+      },
+      currentController: {
+        (self.mainController.selectedViewController as? UINavigationController)!.topViewController!
+      }
+    )
+
     window?.makeKeyAndVisible()
 
     return true

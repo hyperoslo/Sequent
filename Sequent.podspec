@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Sequent"
-  s.summary          = "A short description of Sequent."
+  s.summary          = "Sequent iOS Framework."
   s.version          = "0.1.0"
   s.homepage         = "https://github.com/hyperoslo/Sequent"
   s.license          = 'MIT'
@@ -20,9 +20,13 @@ Pod::Spec.new do |s|
   s.tvos.source_files = 'Sources/{iOS,Shared}/**/*'
   s.osx.source_files = 'Sources/{Mac,Shared}/**/*'
 
-  # s.ios.frameworks = 'UIKit', 'Foundation'
-  # s.osx.frameworks = 'Cocoa', 'Foundation'
+  s.ios.frameworks = 'UIKit', 'Foundation'
+  s.osx.frameworks = 'Cocoa', 'Foundation'
 
-  # s.dependency 'Whisper', '~> 1.0'
+  s.dependency 'Spots'
+  s.dependency 'Compass'
+  s.dependency 'Malibu'
+  s.dependency 'RxSwift'
+  s.dependency 'ReactiveReSwift'
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 end

@@ -13,10 +13,38 @@
 		D24F80AB1DAE2727008185FF /* macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F80AA1DAE2727008185FF /* macOSTests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* Sequent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Sequent.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Sequent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Sequent.framework */; };
-		D5C629831C3A892A007F7B7C /* iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629821C3A892A007F7B7C /* iOS.swift */; };
+		D5C629831C3A892A007F7B7C /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629821C3A892A007F7B7C /* Controller.swift */; };
 		D5C629851C3A893F007F7B7C /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629841C3A893F007F7B7C /* Mac.swift */; };
 		D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
 		D5C629881C3A89A8007F7B7C /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C629861C3A89A8007F7B7C /* Shared.swift */; };
+		D5D5B8321E26BAF80042713B /* Brick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8261E26BAF80042713B /* Brick.framework */; };
+		D5D5B8331E26BAF80042713B /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8271E26BAF80042713B /* Cache.framework */; };
+		D5D5B8341E26BAF80042713B /* Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8281E26BAF80042713B /* Compass.framework */; };
+		D5D5B8351E26BAF80042713B /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8291E26BAF80042713B /* CryptoSwift.framework */; };
+		D5D5B8361E26BAF80042713B /* Malibu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82A1E26BAF80042713B /* Malibu.framework */; };
+		D5D5B8371E26BAF80042713B /* ReactiveReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82B1E26BAF80042713B /* ReactiveReSwift.framework */; };
+		D5D5B8381E26BAF80042713B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82C1E26BAF80042713B /* RxBlocking.framework */; };
+		D5D5B8391E26BAF80042713B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82D1E26BAF80042713B /* RxCocoa.framework */; };
+		D5D5B83A1E26BAF80042713B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82E1E26BAF80042713B /* RxSwift.framework */; };
+		D5D5B83B1E26BAF80042713B /* Spots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82F1E26BAF80042713B /* Spots.framework */; };
+		D5D5B83C1E26BAF80042713B /* Tailor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8301E26BAF80042713B /* Tailor.framework */; };
+		D5D5B83D1E26BAF80042713B /* When.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8311E26BAF80042713B /* When.framework */; };
+		D5D5B83E1E26BB280042713B /* Brick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8261E26BAF80042713B /* Brick.framework */; };
+		D5D5B83F1E26BB280042713B /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8271E26BAF80042713B /* Cache.framework */; };
+		D5D5B8401E26BB280042713B /* Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8281E26BAF80042713B /* Compass.framework */; };
+		D5D5B8411E26BB280042713B /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8291E26BAF80042713B /* CryptoSwift.framework */; };
+		D5D5B8421E26BB280042713B /* Malibu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82A1E26BAF80042713B /* Malibu.framework */; };
+		D5D5B8431E26BB280042713B /* ReactiveReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82B1E26BAF80042713B /* ReactiveReSwift.framework */; };
+		D5D5B8441E26BB280042713B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82C1E26BAF80042713B /* RxBlocking.framework */; };
+		D5D5B8451E26BB280042713B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82D1E26BAF80042713B /* RxCocoa.framework */; };
+		D5D5B8461E26BB280042713B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82E1E26BAF80042713B /* RxSwift.framework */; };
+		D5D5B8471E26BB280042713B /* Spots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82F1E26BAF80042713B /* Spots.framework */; };
+		D5D5B8481E26BB280042713B /* Tailor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8301E26BAF80042713B /* Tailor.framework */; };
+		D5D5B8491E26BB280042713B /* When.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8311E26BAF80042713B /* When.framework */; };
+		D5D5B84F1E26BC770042713B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B84B1E26BC770042713B /* RxBlocking.framework */; };
+		D5D5B8501E26BC770042713B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B84C1E26BC770042713B /* RxCocoa.framework */; };
+		D5D5B8511E26BC770042713B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B84D1E26BC770042713B /* RxSwift.framework */; };
+		D5D5B8521E26BC770042713B /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B84E1E26BC770042713B /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +74,29 @@
 		D5B2E8A91C3A780C00C0327D /* Sequent-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sequent-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629401C3A7FAA007F7B7C /* Sequent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sequent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629491C3A7FAA007F7B7C /* Sequent-Mac-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sequent-Mac-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5C629821C3A892A007F7B7C /* iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOS.swift; sourceTree = "<group>"; };
+		D5C629821C3A892A007F7B7C /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		D5C629841C3A893F007F7B7C /* Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mac.swift; sourceTree = "<group>"; };
 		D5C629861C3A89A8007F7B7C /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
 		D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Mac.plist"; sourceTree = "<group>"; };
+		D5D5B8261E26BAF80042713B /* Brick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Brick.framework; path = Carthage/Build/iOS/Brick.framework; sourceTree = "<group>"; };
+		D5D5B8271E26BAF80042713B /* Cache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cache.framework; path = Carthage/Build/iOS/Cache.framework; sourceTree = "<group>"; };
+		D5D5B8281E26BAF80042713B /* Compass.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Compass.framework; path = Carthage/Build/iOS/Compass.framework; sourceTree = "<group>"; };
+		D5D5B8291E26BAF80042713B /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		D5D5B82A1E26BAF80042713B /* Malibu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Malibu.framework; path = Carthage/Build/iOS/Malibu.framework; sourceTree = "<group>"; };
+		D5D5B82B1E26BAF80042713B /* ReactiveReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveReSwift.framework; path = Carthage/Build/iOS/ReactiveReSwift.framework; sourceTree = "<group>"; };
+		D5D5B82C1E26BAF80042713B /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		D5D5B82D1E26BAF80042713B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D5D5B82E1E26BAF80042713B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D5D5B82F1E26BAF80042713B /* Spots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spots.framework; path = Carthage/Build/iOS/Spots.framework; sourceTree = "<group>"; };
+		D5D5B8301E26BAF80042713B /* Tailor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tailor.framework; path = Carthage/Build/iOS/Tailor.framework; sourceTree = "<group>"; };
+		D5D5B8311E26BAF80042713B /* When.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = When.framework; path = Carthage/Build/iOS/When.framework; sourceTree = "<group>"; };
+		D5D5B84B1E26BC770042713B /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
+		D5D5B84C1E26BC770042713B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		D5D5B84D1E26BC770042713B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		D5D5B84E1E26BC770042713B /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +104,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D5B83E1E26BB280042713B /* Brick.framework in Frameworks */,
+				D5D5B83F1E26BB280042713B /* Cache.framework in Frameworks */,
+				D5D5B8401E26BB280042713B /* Compass.framework in Frameworks */,
+				D5D5B8411E26BB280042713B /* CryptoSwift.framework in Frameworks */,
+				D5D5B8421E26BB280042713B /* Malibu.framework in Frameworks */,
+				D5D5B8431E26BB280042713B /* ReactiveReSwift.framework in Frameworks */,
+				D5D5B8441E26BB280042713B /* RxBlocking.framework in Frameworks */,
+				D5D5B8451E26BB280042713B /* RxCocoa.framework in Frameworks */,
+				D5D5B8461E26BB280042713B /* RxSwift.framework in Frameworks */,
+				D5D5B8471E26BB280042713B /* Spots.framework in Frameworks */,
+				D5D5B8481E26BB280042713B /* Tailor.framework in Frameworks */,
+				D5D5B8491E26BB280042713B /* When.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +123,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D5B8321E26BAF80042713B /* Brick.framework in Frameworks */,
+				D5D5B8331E26BAF80042713B /* Cache.framework in Frameworks */,
+				D5D5B8341E26BAF80042713B /* Compass.framework in Frameworks */,
+				D5D5B8351E26BAF80042713B /* CryptoSwift.framework in Frameworks */,
+				D5D5B8361E26BAF80042713B /* Malibu.framework in Frameworks */,
+				D5D5B8371E26BAF80042713B /* ReactiveReSwift.framework in Frameworks */,
+				D5D5B8381E26BAF80042713B /* RxBlocking.framework in Frameworks */,
+				D5D5B8391E26BAF80042713B /* RxCocoa.framework in Frameworks */,
+				D5D5B83A1E26BAF80042713B /* RxSwift.framework in Frameworks */,
+				D5D5B83B1E26BAF80042713B /* Spots.framework in Frameworks */,
+				D5D5B83C1E26BAF80042713B /* Tailor.framework in Frameworks */,
+				D5D5B83D1E26BAF80042713B /* When.framework in Frameworks */,
 				D5B2E8AA1C3A780C00C0327D /* Sequent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +143,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D5B84F1E26BC770042713B /* RxBlocking.framework in Frameworks */,
+				D5D5B8501E26BC770042713B /* RxCocoa.framework in Frameworks */,
+				D5D5B8511E26BC770042713B /* RxSwift.framework in Frameworks */,
+				D5D5B8521E26BC770042713B /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +170,7 @@
 				D5C6295C1C3A800E007F7B7C /* Sequent */,
 				D5C6298F1C3A8BDA007F7B7C /* SequentTests */,
 				D5B2E8A01C3A780C00C0327D /* Products */,
+				D5D5B8251E26BAF80042713B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,7 +207,7 @@
 		D5C6296A1C3A809D007F7B7C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D5C629821C3A892A007F7B7C /* iOS.swift */,
+				D5C629821C3A892A007F7B7C /* Controller.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -191,6 +264,29 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		D5D5B8251E26BAF80042713B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5D5B84B1E26BC770042713B /* RxBlocking.framework */,
+				D5D5B84C1E26BC770042713B /* RxCocoa.framework */,
+				D5D5B84D1E26BC770042713B /* RxSwift.framework */,
+				D5D5B84E1E26BC770042713B /* RxTest.framework */,
+				D5D5B8261E26BAF80042713B /* Brick.framework */,
+				D5D5B8271E26BAF80042713B /* Cache.framework */,
+				D5D5B8281E26BAF80042713B /* Compass.framework */,
+				D5D5B8291E26BAF80042713B /* CryptoSwift.framework */,
+				D5D5B82A1E26BAF80042713B /* Malibu.framework */,
+				D5D5B82B1E26BAF80042713B /* ReactiveReSwift.framework */,
+				D5D5B82C1E26BAF80042713B /* RxBlocking.framework */,
+				D5D5B82D1E26BAF80042713B /* RxCocoa.framework */,
+				D5D5B82E1E26BAF80042713B /* RxSwift.framework */,
+				D5D5B82F1E26BAF80042713B /* Spots.framework */,
+				D5D5B8301E26BAF80042713B /* Tailor.framework */,
+				D5D5B8311E26BAF80042713B /* When.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -219,6 +315,7 @@
 				D5B2E89B1C3A780C00C0327D /* Frameworks */,
 				D5B2E89C1C3A780C00C0327D /* Headers */,
 				D5B2E89D1C3A780C00C0327D /* Resources */,
+				D5D5B84A1E26BB6B0042713B /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -362,12 +459,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D5D5B84A1E26BB6B0042713B /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Brick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cache.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Compass.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Malibu.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveReSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Spots.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Tailor.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/When.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5B2E89A1C3A780C00C0327D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C629831C3A892A007F7B7C /* iOS.swift in Sources */,
+				D5C629831C3A892A007F7B7C /* Controller.swift in Sources */,
 				D5C629871C3A89A8007F7B7C /* Shared.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,9 +647,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sequent/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Sequent-iOS";
 				PRODUCT_NAME = Sequent;
@@ -542,9 +672,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sequent/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.Sequent-iOS";
 				PRODUCT_NAME = Sequent;
@@ -595,6 +729,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Sequent/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -618,6 +756,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Sequent/Info-Mac.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
