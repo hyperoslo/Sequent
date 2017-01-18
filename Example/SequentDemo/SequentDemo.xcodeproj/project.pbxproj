@@ -11,7 +11,6 @@
 		D5641A311E2CD8DB0035AB0A /* FashionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A101E2CD8DB0035AB0A /* FashionConfigurator.swift */; };
 		D5641A321E2CD8DB0035AB0A /* MalibuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A111E2CD8DB0035AB0A /* MalibuConfigurator.swift */; };
 		D5641A3E1E2CD8DB0035AB0A /* PayloadStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A211E2CD8DB0035AB0A /* PayloadStorage.swift */; };
-		D5641A3F1E2CD8DB0035AB0A /* StyleConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A221E2CD8DB0035AB0A /* StyleConvertible.swift */; };
 		D5641A401E2CD8DB0035AB0A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A231E2CD8DB0035AB0A /* UIViewController+Extensions.swift */; };
 		D5641A411E2CD8DB0035AB0A /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A251E2CD8DB0035AB0A /* Entity.swift */; };
 		D5641A421E2CD8DB0035AB0A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5641A261E2CD8DB0035AB0A /* Note.swift */; };
@@ -44,7 +43,6 @@
 		D5641A101E2CD8DB0035AB0A /* FashionConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FashionConfigurator.swift; sourceTree = "<group>"; };
 		D5641A111E2CD8DB0035AB0A /* MalibuConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalibuConfigurator.swift; sourceTree = "<group>"; };
 		D5641A211E2CD8DB0035AB0A /* PayloadStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadStorage.swift; sourceTree = "<group>"; };
-		D5641A221E2CD8DB0035AB0A /* StyleConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleConvertible.swift; sourceTree = "<group>"; };
 		D5641A231E2CD8DB0035AB0A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D5641A251E2CD8DB0035AB0A /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		D5641A261E2CD8DB0035AB0A /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				D5641A211E2CD8DB0035AB0A /* PayloadStorage.swift */,
-				D5641A221E2CD8DB0035AB0A /* StyleConvertible.swift */,
 				D5641A231E2CD8DB0035AB0A /* UIViewController+Extensions.swift */,
 			);
 			path = Library;
@@ -402,7 +399,6 @@
 				D5641A321E2CD8DB0035AB0A /* MalibuConfigurator.swift in Sources */,
 				D590B49B1E2D4BEC00F51A9B /* ProfileController.swift in Sources */,
 				D5AE32E01E2EFB1300C13479 /* NoteRoutes.swift in Sources */,
-				D5641A3F1E2CD8DB0035AB0A /* StyleConvertible.swift in Sources */,
 				D5641A4E1E2CF48A0035AB0A /* Indentifiers.swift in Sources */,
 				D590B4AC1E2D91F900F51A9B /* TodoItemBuilder.swift in Sources */,
 				D5641A401E2CD8DB0035AB0A /* UIViewController+Extensions.swift in Sources */,

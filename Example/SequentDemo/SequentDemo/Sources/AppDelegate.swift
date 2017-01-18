@@ -33,9 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       $0.configure()
     }
 
-    //.scan(App.store.observable.value.navigationState) { lastValue, newValue in
-    //  return Array(lastSlice + [newValue]).suffix(3)
-
     navigator = Navigator(
       navigationRouter: { App.router },
       observable: {
