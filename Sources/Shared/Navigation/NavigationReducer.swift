@@ -2,6 +2,8 @@ import ReactiveReSwift
 
 public struct NavigationReducer {
 
+  public init() {}
+
   public func reduce(action: Action, state: NavigationState) -> NavigationState {
     var state = state
 

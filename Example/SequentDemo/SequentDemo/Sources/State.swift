@@ -4,10 +4,12 @@ import Sequent
 import Malibu
 import When
 import Spots
+import Compass
 
 // State
 
 struct AppState: StateType {
+  var navigationState = NavigationState()
   var notes: Output<[Component]> = .data([])
   var todos: Output<[Component]> = .data([])
   var profile = Profile()
@@ -16,9 +18,13 @@ struct AppState: StateType {
 // Store
 
 struct App {
+  static var delegate: AppDelegate?
+  static let state = AppState()
+  static var router = Router()
+
   static let store = Store(
     reducer: reducer,
-    observable: Variable(AppState()),
+    observable: Variable(state),
     middleware: Middleware(loggingMiddleware)
   )
 
@@ -44,6 +50,8 @@ struct App {
     default:
       break
     }
+
+    state.navigationState = NavigationReducer().reduce(action: action, state: state.navigationState)
 
     return state
   }

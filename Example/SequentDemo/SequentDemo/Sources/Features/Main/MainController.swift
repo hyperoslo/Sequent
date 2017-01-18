@@ -1,5 +1,7 @@
 import UIKit
 import Sequent
+import Spots
+import Brick
 
 class MainController: UITabBarController {
 
@@ -20,6 +22,7 @@ class MainController: UITabBarController {
     controller.title = "Notes"
     controller.tabBarItem.title = "Notes"
     controller.tabBarItem.image = UIImage(named: "tabNotes")
+    controller.delegate = self
 
     return navigationController
   }()
@@ -74,5 +77,15 @@ class MainController: UITabBarController {
     ]
     
     selectedIndex = 0
+  }
+}
+
+extension MainController: SpotsDelegate {
+
+  public func didSelect(item: Item, in spot: Spotable) {
+    if let action = item.action {
+      let ac = App.delegate?.navigator?.buildAction(urn: action, payload: item)
+      App.store.dispatch(ac!)
+    }
   }
 }

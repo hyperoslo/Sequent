@@ -1,3 +1,5 @@
+import Foundation
+
 public enum Output<T> {
   case progress
   case data(T)
@@ -29,4 +31,8 @@ public enum Output<T> {
       return false
     }
   }
+}
+
+public func ==<T: Equatable>(lhs: Output<T>, rhs: Output<T>) -> Bool {
+  return lhs.data == rhs.data && lhs.inProgress == rhs.inProgress && (lhs.error as? NSError == rhs.error as? NSError)
 }

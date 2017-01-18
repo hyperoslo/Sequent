@@ -9,13 +9,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var configurators: [Configurable] = [
     FashionConfigurator(),
     MalibuConfigurator(),
-    SpotsConfigurator()
+    SpotsConfigurator(),
+    CompassConfigurator()
   ]
 
   lazy var mainController: MainController = {
     let controller = MainController()
     return controller
   }()
+
+  var navigator: Navigator?
 
   // MARK: - Application lifecycle
 
@@ -24,9 +27,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = mainController
 
+    App.delegate = self
+
     configurators.forEach {
       $0.configure()
     }
+
+    //.scan(App.store.observable.value.navigationState) { lastValue, newValue in
+    //  return Array(lastSlice + [newValue]).suffix(3)
+
+    navigator = Navigator(
+      navigationRouter: { App.router },
+      observable: {
+        App.store.observable.asObservable().map({ $0.navigationState }).distinctUntilChanged()
+      },
+      currentController: {
+        (self.mainController.selectedViewController as? UINavigationController)!.topViewController!
+      }
+    )
 
     window?.makeKeyAndVisible()
 

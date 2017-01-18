@@ -30,6 +30,8 @@
 		D590B4AA1E2D91B100F51A9B /* TodoActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B4A91E2D91B100F51A9B /* TodoActions.swift */; };
 		D590B4AC1E2D91F900F51A9B /* TodoItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B4AB1E2D91F900F51A9B /* TodoItemBuilder.swift */; };
 		D590B4AE1E2D9DEF00F51A9B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590B4AD1E2D9DEF00F51A9B /* Profile.swift */; };
+		D5AE32E01E2EFB1300C13479 /* NoteRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE32DF1E2EFB1300C13479 /* NoteRoutes.swift */; };
+		D5AE32E21E2EFB9300C13479 /* CompassConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE32E11E2EFB9300C13479 /* CompassConfigurator.swift */; };
 		D5BB20AB1E28D3FB00637E95 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB20AA1E28D3FB00637E95 /* State.swift */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
@@ -61,6 +63,8 @@
 		D590B4A91E2D91B100F51A9B /* TodoActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoActions.swift; sourceTree = "<group>"; };
 		D590B4AB1E2D91F900F51A9B /* TodoItemBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItemBuilder.swift; sourceTree = "<group>"; };
 		D590B4AD1E2D9DEF00F51A9B /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		D5AE32DF1E2EFB1300C13479 /* NoteRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteRoutes.swift; sourceTree = "<group>"; };
+		D5AE32E11E2EFB9300C13479 /* CompassConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassConfigurator.swift; sourceTree = "<group>"; };
 		D5BB20AA1E28D3FB00637E95 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		D5C7F7401C3BC9CE008CDDBA /* SequentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SequentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C7F74D1C3BC9CE008CDDBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 				D5641A101E2CD8DB0035AB0A /* FashionConfigurator.swift */,
 				D5641A111E2CD8DB0035AB0A /* MalibuConfigurator.swift */,
 				D5641A4A1E2CF4130035AB0A /* SpotsConfigurator.swift */,
+				D5AE32E11E2EFB9300C13479 /* CompassConfigurator.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				D590B49F1E2D4C4E00F51A9B /* NoteActions.swift */,
 				D590B4A11E2D59AA00F51A9B /* NoteItemBuilder.swift */,
 				D590B4A51E2D84FA00F51A9B /* NoteController.swift */,
+				D5AE32DF1E2EFB1300C13479 /* NoteRoutes.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -395,12 +401,14 @@
 				D590B4A01E2D4C4E00F51A9B /* NoteActions.swift in Sources */,
 				D5641A321E2CD8DB0035AB0A /* MalibuConfigurator.swift in Sources */,
 				D590B49B1E2D4BEC00F51A9B /* ProfileController.swift in Sources */,
+				D5AE32E01E2EFB1300C13479 /* NoteRoutes.swift in Sources */,
 				D5641A3F1E2CD8DB0035AB0A /* StyleConvertible.swift in Sources */,
 				D5641A4E1E2CF48A0035AB0A /* Indentifiers.swift in Sources */,
 				D590B4AC1E2D91F900F51A9B /* TodoItemBuilder.swift in Sources */,
 				D5641A401E2CD8DB0035AB0A /* UIViewController+Extensions.swift in Sources */,
 				D5641A311E2CD8DB0035AB0A /* FashionConfigurator.swift in Sources */,
 				D5641A441E2CD8DB0035AB0A /* Todo.swift in Sources */,
+				D5AE32E21E2EFB9300C13479 /* CompassConfigurator.swift in Sources */,
 				D5641A3E1E2CD8DB0035AB0A /* PayloadStorage.swift in Sources */,
 				D590B4AA1E2D91B100F51A9B /* TodoActions.swift in Sources */,
 				D5641A451E2CD8DB0035AB0A /* MainStylesheet.swift in Sources */,
