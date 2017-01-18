@@ -1,5 +1,6 @@
 import Compass
 
 public struct NavigationState {
-  public let location: Location
+  public var previousLocation: Output<Location> = .progress
+  public var location: Output<Location> = .progress
 }

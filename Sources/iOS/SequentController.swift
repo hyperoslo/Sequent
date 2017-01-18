@@ -59,13 +59,13 @@ public class SequentController: Spots.Controller {
     }
   }
 
-  public convenience init<T: ObservableType>(
+  public convenience init(
     cacheKey: String? = nil,
     spots: [Spotable] = [],
     dispatch: (() -> Void)? = nil,
-    observable: @escaping () -> T,
+    observable: @escaping () -> Observable<Output<[Component]>>,
     behaviors: [Behavior] = [],
-    features: [Feature] = Feature.allValues) where T.E == Output<[Component]>
+    features: [Feature] = Feature.allValues)
   {
     self.init(cacheKey: cacheKey, spots: spots, dispatch: dispatch, behaviors: behaviors, features: features)
     let reloadBehavior = ComponentReloadBehavior(observable: observable)

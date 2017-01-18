@@ -1,13 +1,13 @@
 import RxSwift
 import Spots
 
-public final class ComponentReloadBehavior<T: ObservableType>: Behavior where T.E == Output<[Component]> {
+public final class ComponentReloadBehavior: Behavior {
 
   weak var controller: SequentController?
-  let observable: () -> T
+  let observable: () -> Observable<Output<[Component]>>
   private let disposeBag = DisposeBag()
 
-  public init(observable: @escaping () -> T) {
+  public init(observable: @escaping () -> Observable<Output<[Component]>>) {
     self.observable = observable
   }
 

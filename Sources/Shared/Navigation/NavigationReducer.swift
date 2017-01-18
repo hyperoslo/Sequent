@@ -1,15 +1,18 @@
-//import ReactiveReSwift
-//
-//public struct NavigationReducer {
-//
-//  public func reduce(action: Action, state: NavigationState) -> NavigationState {
-//    var state = state
-//
-//    switch action {
-//    case let action as CompassAction:
-//      state.location = action.l
-//    default:
-//      <#code#>
-//    }
-//  }
-//}
+import ReactiveReSwift
+
+public struct NavigationReducer {
+
+  public func reduce(action: Action, state: NavigationState) -> NavigationState {
+    var state = state
+
+    switch action {
+    case let action as NavigationAction:
+      state.previousLocation = state.location
+      state.location = action.payload
+    default:
+      break
+    }
+
+    return state
+  }
+}
