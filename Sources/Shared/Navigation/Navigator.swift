@@ -42,8 +42,9 @@ public final class Navigator {
     self.currentController = currentController
     Compass.routes = Array(navigationRouter().routes.keys)
 
+    // FIXME
     if let intentRouter = intentRouter?() {
-      Array(intentRouter.routes.keys)
+      let _ = Array(intentRouter.routes.keys)
     }
 
     observe()
