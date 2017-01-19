@@ -27,7 +27,7 @@ extension Promise: ObservableConvertibleType {
 
 // MARK: - JSON dictionary
 
-extension Collection where Self: DictionaryLiteralConvertible, Self.Key == String, Self.Value: Any, Iterator.Element == (key: Self.Key, value: Self.Value) {
+extension Collection where Self: ExpressibleByDictionaryLiteral, Self.Key == String, Self.Value: Any, Iterator.Element == (key: Self.Key, value: Self.Value) {
 
   func toDictionary() -> JsonDictionary {
     var dict = JsonDictionary()
@@ -40,7 +40,7 @@ extension Collection where Self: DictionaryLiteralConvertible, Self.Key == Strin
   }
 }
 
-public extension Promise where T: Collection, T: DictionaryLiteralConvertible, T.Key == String, T.Value: Any, T.Iterator.Element == (key: T.Key, value: T.Value) {
+public extension Promise where T: Collection, T: ExpressibleByDictionaryLiteral, T.Key == String, T.Value: Any, T.Iterator.Element == (key: T.Key, value: T.Value) {
 
   public func toComponents(viewModel: ViewModel.Type) -> Promise<[Component]> {
     return then({ collection -> [Component] in
@@ -67,7 +67,7 @@ public extension Promise where T: Sequence, T.Iterator.Element == JsonDictionary
       let array = Array(sequence)
 
       let items = try IB.T.map(array: array).map({
-        return IB(try $0).build()
+        return IB($0).build()
       })
 
       let component = Component(kind: kind.rawValue, items: items)

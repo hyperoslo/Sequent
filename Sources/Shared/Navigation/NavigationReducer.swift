@@ -1,4 +1,5 @@
-import ReactiveReSwift
+import Foundation
+import ReSwift
 
 public struct NavigationReducer {
 

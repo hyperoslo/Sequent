@@ -1,7 +1,7 @@
-import ReactiveReSwift
 import RxSwift
 import Malibu
 import When
+import ReSwift
 
 public protocol NetworkIntent: ObservableIntent {
   associatedtype E: DynamicAction
@@ -51,7 +51,15 @@ public struct NetworkObservable<A: DynamicAction>: ObservableConvertibleType {
 }
 
 public extension Store {
-  func dispatch<T: NetworkIntent>(_ intent: T) {
-    dispatch(intent.asObservable())
+  func dispatch<T: NetworkIntent>(intent: T) {
+    let _ = intent.asObservable().subscribe { [weak self] (event) in
+      switch event {
+      case .next(let action):
+        self?.dispatch(action)
+        break
+      default:
+        break
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 import Foundation
 import Compass
-import ReactiveReSwift
 import RxSwift
+import ReSwift
 
 // MARK: - Route intents
 
@@ -43,7 +43,7 @@ public final class Navigator {
     Compass.routes = Array(navigationRouter().routes.keys)
 
     if let intentRouter = intentRouter?() {
-      Array(intentRouter.routes.keys)
+      Compass.routes += Array(intentRouter.routes.keys)
     }
 
     observe()

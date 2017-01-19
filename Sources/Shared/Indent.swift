@@ -1,5 +1,5 @@
-import ReactiveReSwift
 import RxSwift
+import ReSwift
 
 public protocol Intent {
   func buildAction() -> Action
