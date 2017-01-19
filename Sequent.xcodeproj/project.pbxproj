@@ -47,8 +47,7 @@
 		D2596A6F1E30DD1500BB361C /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2596A471E30DD1500BB361C /* Output.swift */; };
 		D2596A701E30DD1500BB361C /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2596A481E30DD1500BB361C /* Promise.swift */; };
 		D2596A711E30DD1500BB361C /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2596A481E30DD1500BB361C /* Promise.swift */; };
-		D2596A721E30DD1500BB361C /* ReactiveBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2596A491E30DD1500BB361C /* ReactiveBridge.swift */; };
-		D2596A731E30DD1500BB361C /* ReactiveBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2596A491E30DD1500BB361C /* ReactiveBridge.swift */; };
+		D2596A751E30E75E00BB361C /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2596A741E30E75E00BB361C /* ReSwift.framework */; };
 		D5B2E8AA1C3A780C00C0327D /* Sequent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* Sequent.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* Sequent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* Sequent.framework */; };
 		D5D5B8321E26BAF80042713B /* Brick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8261E26BAF80042713B /* Brick.framework */; };
@@ -68,7 +67,6 @@
 		D5D5B8401E26BB280042713B /* Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8281E26BAF80042713B /* Compass.framework */; };
 		D5D5B8411E26BB280042713B /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B8291E26BAF80042713B /* CryptoSwift.framework */; };
 		D5D5B8421E26BB280042713B /* Malibu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82A1E26BAF80042713B /* Malibu.framework */; };
-		D5D5B8431E26BB280042713B /* ReactiveReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82B1E26BAF80042713B /* ReactiveReSwift.framework */; };
 		D5D5B8441E26BB280042713B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82C1E26BAF80042713B /* RxBlocking.framework */; };
 		D5D5B8451E26BB280042713B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82D1E26BAF80042713B /* RxCocoa.framework */; };
 		D5D5B8461E26BB280042713B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D5B82E1E26BAF80042713B /* RxSwift.framework */; };
@@ -122,7 +120,7 @@
 		D2596A461E30DD1500BB361C /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		D2596A471E30DD1500BB361C /* Output.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
 		D2596A481E30DD1500BB361C /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
-		D2596A491E30DD1500BB361C /* ReactiveBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveBridge.swift; sourceTree = "<group>"; };
+		D2596A741E30E75E00BB361C /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* Sequent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sequent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,12 +154,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2596A751E30E75E00BB361C /* ReSwift.framework in Frameworks */,
 				D5D5B83E1E26BB280042713B /* Brick.framework in Frameworks */,
 				D5D5B83F1E26BB280042713B /* Cache.framework in Frameworks */,
 				D5D5B8401E26BB280042713B /* Compass.framework in Frameworks */,
 				D5D5B8411E26BB280042713B /* CryptoSwift.framework in Frameworks */,
 				D5D5B8421E26BB280042713B /* Malibu.framework in Frameworks */,
-				D5D5B8431E26BB280042713B /* ReactiveReSwift.framework in Frameworks */,
 				D5D5B8441E26BB280042713B /* RxBlocking.framework in Frameworks */,
 				D5D5B8451E26BB280042713B /* RxCocoa.framework in Frameworks */,
 				D5D5B8461E26BB280042713B /* RxSwift.framework in Frameworks */,
@@ -260,7 +258,6 @@
 				D2596A461E30DD1500BB361C /* Networking.swift */,
 				D2596A471E30DD1500BB361C /* Output.swift */,
 				D2596A481E30DD1500BB361C /* Promise.swift */,
-				D2596A491E30DD1500BB361C /* ReactiveBridge.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -369,6 +366,7 @@
 		D5D5B8251E26BAF80042713B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2596A741E30E75E00BB361C /* ReSwift.framework */,
 				D5D5B84B1E26BC770042713B /* RxBlocking.framework */,
 				D5D5B84C1E26BC770042713B /* RxCocoa.framework */,
 				D5D5B84D1E26BC770042713B /* RxSwift.framework */,
@@ -573,7 +571,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Compass.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Malibu.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveReSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
@@ -609,7 +607,6 @@
 				D2596A641E30DD1500BB361C /* NavigationAction.swift in Sources */,
 				D2596A4C1E30DD1500BB361C /* ComponentReloadBehavior.swift in Sources */,
 				D2596A621E30DD1500BB361C /* ViewModel.swift in Sources */,
-				D2596A721E30DD1500BB361C /* ReactiveBridge.swift in Sources */,
 				D2596A541E30DD1500BB361C /* SafeMappable+Extensions.swift in Sources */,
 				D2596A4E1E30DD1500BB361C /* SequentController.swift in Sources */,
 				D2596A521E30DD1500BB361C /* Action.swift in Sources */,
@@ -645,7 +642,6 @@
 				D2596A651E30DD1500BB361C /* NavigationAction.swift in Sources */,
 				D2596A631E30DD1500BB361C /* ViewModel.swift in Sources */,
 				D2596A511E30DD1500BB361C /* Mac.swift in Sources */,
-				D2596A731E30DD1500BB361C /* ReactiveBridge.swift in Sources */,
 				D2596A551E30DD1500BB361C /* SafeMappable+Extensions.swift in Sources */,
 				D2596A531E30DD1500BB361C /* Action.swift in Sources */,
 				D2596A591E30DD1500BB361C /* StringConvertible+Sequent.swift in Sources */,

@@ -1,5 +1,5 @@
-github "hyperoslo/Spots"
+github "hyperoslo/Spots" "fix/lazy"
 github "hyperoslo/Compass"
 github "hyperoslo/Malibu"
 github "ReactiveX/RxSwift" ~> 3.0
-github "ReSwift/ReactiveReSwift"
+github "ReSwift/ReSwift"
