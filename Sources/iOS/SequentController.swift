@@ -2,7 +2,6 @@ import UIKit
 import Spots
 import Brick
 import RxSwift
-import ReactiveReSwift
 
 public class SequentController: Spots.Controller {
 

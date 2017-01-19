@@ -1,7 +1,7 @@
 import Foundation
 import Compass
-import ReactiveReSwift
 import RxSwift
+import ReSwift
 
 // MARK: - Route intents
 
