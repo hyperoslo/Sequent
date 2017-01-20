@@ -5,10 +5,11 @@ public class Subscriber<T: StateType>: StoreSubscriber {
   public typealias StoreSubscriberStateType = T
 
   weak var store: Store<T>?
-  public let state: Variable<T?> = Variable(nil)
+  public let state: Variable<T>
 
-  public init(store: Store<T>) {
+  public init(store: Store<T>, state: T) {
     self.store = store
+    self.state = Variable(state)
     store.subscribe(self)
   }
 
