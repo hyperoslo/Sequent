@@ -1,5 +1,7 @@
 # Sequent
 
+⚠️ DEPRECATED, NO LONGER MAINTAINED
+
 [![CI Status](http://img.shields.io/travis/hyperoslo/Sequent.svg?style=flat)](https://travis-ci.org/hyperoslo/Sequent)
 [![Version](https://img.shields.io/cocoapods/v/Sequent.svg?style=flat)](http://cocoadocs.org/docsets/Sequent)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
